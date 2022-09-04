@@ -6,6 +6,8 @@ El desafío es construir esta página "próximamente" y lograr que se parezca lo
 - CSS
 - JS Vanilla
 
+![desktop-design](https://user-images.githubusercontent.com/112582420/188327218-091ad676-f5ae-47f4-86e3-8b269525f4c3.jpg)
+
 # Guía de Estilo
 
 ## Diseño
