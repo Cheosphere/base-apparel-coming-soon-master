@@ -250,7 +250,8 @@ body {
 
     .icon_error {
         position: absolute;
-        right: 70px;
+        right: 75px;
+        top: 12px;
     }
 
 }
