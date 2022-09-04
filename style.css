@@ -126,7 +126,7 @@ body {
     padding-top: 3px;
     position: absolute;
     right: 0;
-    grid-row: 8;
+    bottom: 4px;
     border: none;
     border-radius: 56px;
     box-shadow: 0 15px 25px hsla(0, 43%, 76%, 0.483);
@@ -246,6 +246,7 @@ body {
     .content_form_button {
         width: 65px;
         height: 48px;
+        top: 1px;
     }
 
     .icon_error {
