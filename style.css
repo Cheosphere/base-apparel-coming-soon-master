@@ -1,0 +1,256 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background: rgb(30, 30, 30);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    width: 90%;
+    max-width: 1440px;
+    height: 800px;
+    background-color: white;
+    background-image: linear-gradient(35deg,
+            rgba(248, 191, 191, 0.1) 0%,
+            rgba(243, 165, 165, 0.052) 50%,
+            rgba(238, 140, 140, 0.09) 100%);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: .71fr 2fr .85fr 2.615fr;
+    grid-template-rows: 65px 35px 132px 188px 38px 72px 52px 60px 158px;
+    background-image: url(images/bg-pattern-desktop.svg);
+}
+
+.content_header {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* ESTILOS ASIDE */
+.aside {
+    grid-column: 4 / 5;
+    grid-row: 1 / -1;
+    background-image: url(images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .35s ease-out;
+}
+
+.content_title span {
+    font-weight: 200;
+    letter-spacing: 1.15rem;
+    color: hsl(0, 36%, 70%);
+}
+
+.content_title {
+    width: 350px;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    font-size: 2.63rem;
+    line-height: 4.295rem;
+    letter-spacing: 1.1rem;
+    transition: all .35s ease-out;
+}
+
+.content_parag {
+    width: 440px;
+    margin-left: 1px;
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+    font-weight: 300;
+    line-height: 1.75rem;
+    letter-spacing: 0.028rem;
+    color: hsl(0, 36%, 70%);
+    transition: all .35s ease-out;
+}
+
+/* ESTILOS FORMULARIO */
+.content_form {
+    width: 445px;
+    grid-column: 2;
+    grid-row: 8;
+    position: relative;
+}
+
+.content_form_input {
+    width: 445px;
+    height: 56px;
+    padding-left: 2rem;
+    padding-right: 9rem;
+    margin-bottom: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 12%);
+    background-color: transparent;
+    border-radius: 56px;
+    border: 1px solid hsla(0, 36%, 70%, 0.5);
+}
+
+.content_form_input:focus {
+    outline: 2px solid hsl(0, 93%, 68%);
+    outline-offset: -2px;
+}
+
+.content_form_input::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: hsla(0, 36%, 70%, 0.9);
+}
+
+.content_form_button {
+    width: 100px;
+    height: 56px;
+    padding-left: 2px;
+    padding-top: 3px;
+    position: absolute;
+    right: 0;
+    grid-row: 8;
+    border: none;
+    border-radius: 56px;
+    box-shadow: 0 15px 25px hsla(0, 43%, 76%, 0.483);
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%);
+    cursor: pointer;
+}
+
+.icon_error {
+    display: none;
+    position: absolute;
+    right: 117px;
+    top: 17px;
+}
+
+.icon_error_show {
+    display: block;
+}
+
+.content_form_button:hover {
+    background: hsl(0, 80%, 86%);
+}
+
+.error_msg {
+    margin-left: 2rem;
+    font-weight: 400;
+    font-size: .81rem;
+    color: hsl(0, 74%, 74%);
+}
+
+.ok_msg {
+    color: darkturquoise;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 900px) {
+
+    body {
+        height: auto;
+        /* align-items: flex-start; */
+        background: linear-gradient(35deg,
+                rgba(248, 191, 191, 0.1) 0%,
+                rgba(243, 165, 165, 0.052) 50%,
+                rgba(238, 140, 140, 0.09) 100%);
+    }
+
+    .container {
+        width: 100%;
+        /* height: 100%; */
+        max-width: none;
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 35px 1fr 35px;
+        grid-template-rows: 30px 25px 30px 250px 65px 115px 25px 80px 40px 50px 82px;
+        justify-items: center;
+        background-image: none;
+    }
+
+    .content_header {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: flex-start;
+    }
+
+    .content_header_logo img {
+        width: 100px;
+        align-self: flex-start;
+    }
+
+    .aside {
+        width: 100%;
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+        background-image: url(images/hero-mobile.jpg);
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    .content_title {
+        width: 100%;
+        max-width: 400px;
+        font-size: 1.6rem;
+        line-height: 2.63rem;
+        letter-spacing: 1rem;
+        grid-column: 2;
+        grid-row: 6;
+        text-align: center;
+    }
+
+    .content_parag {
+        max-width: 330px;
+        width: 100%;
+        grid-row: 8;
+        text-align: center;
+        line-height: 1.35rem;
+        font-size: .9rem;
+    }
+
+    .content_form {
+        width: 310px;
+        grid-row: 10;
+    }
+
+    .content_form_input {
+        width: 100%;
+        padding-right: 6rem;
+        height: 48px;
+    }
+
+    .content_form_input::placeholder {
+        font-size: .9rem;
+    }
+
+    .content_form_button {
+        width: 65px;
+        height: 48px;
+    }
+
+    .icon_error {
+        position: absolute;
+        right: 70px;
+    }
+
+}
